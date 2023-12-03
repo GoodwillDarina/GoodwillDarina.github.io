@@ -27,15 +27,7 @@ export default defineConfig({
             }
           }
         ]
-      },
-      png: {
-        quality: 100
-      },
-      webp: {
-        lossless: true
-      },
-      cache: false,
-      cacheLocation: undefined
+      }
     }),
     svgLoader()
   ]
