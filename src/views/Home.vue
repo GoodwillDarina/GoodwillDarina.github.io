@@ -11,7 +11,7 @@ import { PHOTO, TEXT } from '../data';
 
 <style lang="scss" scoped>
 section {
-  max-width: 780px;
+  max-width: 788px;
   padding: 40px;
   box-sizing: border-box;
   background: rgba(255, 255, 255, 0.3);
