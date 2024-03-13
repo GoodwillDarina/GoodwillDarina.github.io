@@ -19,7 +19,8 @@ const { contacts } = defineProps({
 });
 
 const getIcon = (name: string) => {
-  return defineAsyncComponent(() => import(`../assets/icons/${name}.svg`));
+  const path = `../assets/icons/${name}.svg`;
+  return defineAsyncComponent(() => import(/* @vite-ignore */ path));
 };
 </script>
 
