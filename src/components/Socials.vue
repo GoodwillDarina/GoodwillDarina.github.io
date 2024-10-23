@@ -1,6 +1,6 @@
 <template>
   <section>
-    <a v-for="item of contacts" :key="item.name" :href="item.url" target="blank" :aria-label="item.name">
+    <a v-for="item of contacts" :key="item.name" :href="item.url" target="blank" :aria-label="item.name" :title="item.title">
       <component :is="getIcon(item.name)" width="40" height="40" aria-hidden />
     </a>
   </section>
@@ -18,10 +18,7 @@ const { contacts } = defineProps({
   }
 });
 
-const getIcon = (name: string) => {
-  const path = `../assets/icons/${name}.svg`;
-  return defineAsyncComponent(() => import(/* @vite-ignore */ path));
-};
+const getIcon = (name: string) => defineAsyncComponent(() => import(`../assets/icons/${name}.svg`));
 </script>
 
 <style lang="scss" scoped>
@@ -35,6 +32,8 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  width: 40px;
+  height: 40px;
   margin: 0 12px;
   color: rgba(#ffffff, 0.5);
   text-decoration: none;
@@ -49,4 +48,3 @@ a {
   }
 }
 </style>
-../data

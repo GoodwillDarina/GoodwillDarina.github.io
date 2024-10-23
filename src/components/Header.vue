@@ -4,11 +4,19 @@
       <img src="../assets/name.png" width="600" alt="Daria Saburova" />
     </router-link>
     <nav>
-      <router-link to="/articles" active-class="active">My articles</router-link>
-      <router-link to="/videos" active-class="active">My presentations</router-link>
+      <router-link to="/articles" active-class="active">Мои статьи</router-link>
+      <router-link to="/videos" active-class="active">Мои доклады</router-link>
+      <a href="https://t.me/notebook_frontender" target="_blank">
+        Блокнотик фронтендера
+        <LinkSvg width="20" height="20" aria-hidden />
+      </a>
     </nav>
   </header>
 </template>
+
+<script setup lang="ts">
+import LinkSvg from '../assets/icons/link.svg';
+</script>
 
 <style lang="scss" scoped>
 header {
@@ -61,6 +69,10 @@ a {
   &.active {
     color: #fff0d2;
     text-decoration: underline;
+  }
+
+  svg {
+    color: currentColor;
   }
 
   @media (min-width: 600px) {
