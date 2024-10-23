@@ -7,6 +7,7 @@ import vue from '@vitejs/plugin-vue';
 export default defineConfig({
   plugins: [
     vue(),
+    svgLoader(),
     ViteImageOptimizer({
       test: /\.(png|webp|svg)$/i,
       exclude: undefined,
@@ -28,7 +29,6 @@ export default defineConfig({
           }
         ]
       }
-    }),
-    svgLoader()
+    })
   ]
 });
